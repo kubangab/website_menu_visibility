@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_menu_visibility
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20240420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-20 19:58+0000\n"
+"PO-Revision-Date: 2024-04-20 21:59+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: website_menu_visibility
+#: model:ir.model.fields.selection,name:website_menu_visibility.selection__website_menu__visibility__all
+msgid "All Users"
+msgstr "Alla Användare"
+
+#. module: website_menu_visibility
+#: model:ir.model.fields.selection,name:website_menu_visibility.selection__website_menu__visibility__internal
+msgid "Internal Users"
+msgstr "Interna användare"
+
+#. module: website_menu_visibility
+#: model:ir.model.fields.selection,name:website_menu_visibility.selection__website_menu__visibility__portal
+msgid "Portal Users"
+msgstr "Portalanvändare"
+
+#. module: website_menu_visibility
+#: model:ir.model.fields.selection,name:website_menu_visibility.selection__website_menu__visibility__public
+msgid "Public Users"
+msgstr "Offentliga användare"
+
+#. module: website_menu_visibility
+#: model:ir.model.fields,help:website_menu_visibility.field_website_menu__visibility
+msgid "Specify which type of users can see this menu."
+msgstr "Ange vilken typ av användare som kan se denna meny."
+
+#. module: website_menu_visibility
+#: model:ir.model.fields,field_description:website_menu_visibility.field_website_menu__group_ids
+msgid "User Groups"
+msgstr "Användargrupper"
+
+#. module: website_menu_visibility
+#: model:ir.model.fields,field_description:website_menu_visibility.field_website_menu__visibility
+msgid "Visibility"
+msgstr "Synlighet"
+
+#. module: website_menu_visibility
+#: model:ir.model,name:website_menu_visibility.model_website_menu
+msgid "Website Menu"
+msgstr "Webbplatsens meny"

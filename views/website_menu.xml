@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="website_menu_form">
+        <field name="name">website.menu.form</field>
+        <field name="model">website.menu</field>
+        <field name="inherit_id" ref="website.website_menus_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='new_window']" position="after">
+                <field name="visibility"/>
+            </xpath>
+            <xpath expr="//field[@name='new_window']" position="after">
+                <field name="group_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
