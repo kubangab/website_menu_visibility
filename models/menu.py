@@ -11,17 +11,18 @@ class Menu(models.Model):
         ('internal', _('Internal Users'))
     ], string="Visibility", default='all', help=_("Specify which type of users can see this menu."))
 
+    # Update the is_visible field to include recursive=True
     is_visible = fields.Boolean(compute='_compute_visible', recursive=True)
 
-    @api.depends('group_ids', 'visibility', 'parent_id.is_visible') 
+    @api.depends('group_ids', 'visibility', 'parent_id.is_visible')
     def _compute_visible(self):
-        current_user = self.env.user
         for menu in self:
             visible = True
-            if current_user.has_group('base.group_user'):
-              visible = True
+            current_user = self.env.user
 
-           # Visibility based on user type
+            if current_user.has_group('base.group_user'):
+                visible = True
+            # Visibility based on user type
             elif menu.visibility == 'portal' and not current_user.has_group('base.group_portal'):
                 visible = False
             elif menu.visibility == 'public' and not current_user.has_group('base.group_public'):
@@ -34,8 +35,6 @@ class Menu(models.Model):
 
             # Visibility based on group membership
             if visible and menu.group_ids:
-                group_external_ids = [group.get_external_id()[group.id] for group in menu.group_ids]
-                if group_external_ids and not current_user.has_group(",".join(group_external_ids)):
-                    visible = False
+                visible = current_user.groups_id & menu.group_ids
 
             menu.is_visible = visible

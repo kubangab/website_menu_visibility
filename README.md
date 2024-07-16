@@ -30,7 +30,7 @@ After installation, you can configure menu visibility:
 Once configured, the module automatically handles menu visibility based on the current user's status and group memberships. No additional action is required by end-users.
 
 ## Compatibility
-This module is compatible with Odoo 16.0.
+This module is compatible with Odoo 17.0.
 
 ## Support
 For bugs or feature requests, please use the [issue tracker](https://github.com/yourusername/website_menu_visibility/issues) on GitHub.
@@ -42,4 +42,4 @@ For bugs or feature requests, please use the [issue tracker](https://github.com/
 This module is licensed under the LGPL-3 License.
 
 ## About Kubang AB
-Kubang AB Value Added Distributor and Service Provider. Visit our website at https://www.kubang.eu for more information about our services.
+Kubang AB is a Value Added Distributor and Service Provider. Visit our website at https://www.kubang.eu for more information about our services.
